@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Interface - Scenario 5</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Simple icon library (Feather Icons) for demonstration -->
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body>
+    <div class="app-container">
+        <!-- Top Bar (Simplified) -->
+        <div class="top-bar">            <div class="agent-status">
+                <span class="agent-name">Mohammed Ramadan <i data-feather="chevron-down" class="icon-small"></i></span>
+                <button id="logoutBtn" class="logout-btn"><i data-feather="log-out" class="icon-small"></i> Logout</button>
+            </div><div class="scenario-nav">
+                <a href="scenario1.html" class="scenario-box">Scenario 1</a>
+                <a href="scenario2.html" class="scenario-box">Scenario 2</a>
+                <a href="scenario3.html" class="scenario-box">Scenario 3</a>
+                <a href="scenario4.html" class="scenario-box">Scenario 4</a>
+                <a href="scenario5.html" class="scenario-box active">Scenario 5</a>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <!-- Left Panel -->
+            <aside class="left-panel">
+                <div class="company-header">
+                    <h3>VacationBookings</h3>
+                    <span>Travel Support Team</span>
+                </div>
+                <div class="company-info">
+                    <h4>GUIDE</h4>
+                    <p class="company-name-display">Hotel booking changes and cancellations</p>
+                </div>
+
+                <div class="info-box send-to-cs">
+                    <p class="info-box-title"><i data-feather="alert-circle" class="icon-small"></i> IMPORTANT</p>
+                    <ul>
+                        <li>Verify booking details first</li>
+                        <li>Check cancellation policy deadline</li>
+                        <li>Offer alternatives if possible</li>
+                        <li>Explain any fees that may apply</li>
+                    </ul>
+                </div>
+
+                <div class="info-box tone">
+                    <p class="info-box-title"><i data-feather="message-square" class="icon-small"></i> TONE</p>
+                    <ul>
+                        <li>Professional but warm</li>
+                        <li>Use traveler's name when appropriate</li>
+                        <li>Be clear about policies</li>
+                        <li>Show flexibility when possible</li>
+                    </ul>
+                </div>
+
+                <div class="agent-profile">
+                    <p><i data-feather="user" class="icon-small"></i> Emily</p>
+                </div>
+
+                <div class="offer-status">
+                    <i data-feather="tag" class="icon-small"></i> Summer beach deals
+                </div>
+            </aside>
+
+            <!-- Middle Panel (Chat) -->
+            <main class="chat-panel">
+                <div class="chat-messages" id="chatMessages">
+                    <div class="system-message">
+                        <i data-feather="bell" class="icon-small"></i> Travel support conversation started
+                        <span class="timestamp">June 1, 2025, 4:17 pm</span>
+                    </div>
+                    <div class="message received">
+                        <div class="message-sender-icon">C</div>
+                        <div class="message-content">
+                            <p>Hi, I need to change my hotel reservation in Miami. I booked for July 15-20, but now I need to move it to July 17-22 instead. Is this possible?</p>
+                            <span class="timestamp">June 1, 2025, 4:18 pm</span>
+                        </div>
+                    </div>
+                    <div class="message sent">
+                         <div class="message-content">
+                            <p>Hello! I'd be happy to help you with changing your reservation dates.</p>
+                            <p>To get started, could you please provide your booking confirmation number?</p>
+                            <span class="timestamp">June 1, 2025, 4:19 pm</span>
+                        </div>
+                        <div class="message-sender-icon self">V</div>
+                    </div>
+                </div>
+                <div class="chat-input-area">
+                    <input type="text" id="chatInput" placeholder="Type your message...">
+                    <button id="sendButton"><i data-feather="send"></i></button>
+                </div>
+            </main>
+
+            <!-- Right Panel -->
+            <aside class="right-panel">
+                <div class="customer-section">
+                    <h4>CUSTOMER</h4>
+                    <p class="customer-phone">+1 305-987-6543</p>
+                </div>
+
+                <div class="info-block">
+                    <div class="info-block-header">
+                        <span>Booking Details</span>
+                    </div>
+                    <div class="info-block-content">
+                        <p>Reservation #VB-12345678</p>
+                        <p>Ocean View Resort Miami</p>
+                        <p>Deluxe Room - Ocean View</p>
+                    </div>
+                </div>
+
+                <div class="info-block">
+                    <div class="info-block-header">
+                        <span><i data-feather="zap" class="icon-small"></i> Availability</span>
+                    </div>
+                    <ul class="info-list">
+                        <li>Same room available Jul 17-22</li>
+                        <li>Upgrade to Suite (+$50/night)</li>
+                        <li>Garden View (discount $20/night)</li>
+                    </ul>
+                </div>
+                
+                <div class="info-block">
+                    <div class="info-block-header">
+                        <span>Customer History</span>
+                        <i data-feather="chevron-up" class="icon-small"></i>
+                    </div>
+                    <ul class="info-list browsing-history">
+                        <li>Las Vegas - MGM Grand<span class="time-ago">3 mo ago</span></li>
+                        <li>New York - Manhattan Suites<span class="time-ago">8 mo ago</span></li>
+                        <li>San Diego - Beachfront Inn<span class="time-ago">1 y ago</span></li>
+                    </ul>
+                </div>
+
+                <div class="info-block">
+                    <div class="info-block-header">
+                        <span>TEMPLATES</span>
+                        <i data-feather="chevron-up" class="icon-small"></i>
+                    </div>
+                    <div class="search-templates">
+                        <i data-feather="search" class="icon-small"></i>
+                        <input type="text" placeholder="Search templates (ctrl + /)">
+                    </div>
+                    <div class="template-item">
+                        <div class="template-header">
+                            <span>Booking Change Confirmation</span>
+                            <span class="template-shortcut">bcc</span>
+                        </div>
+                        <p>Great news! I've successfully changed your reservation to the new dates (July 17-22). You'll receive an updated confirmation email within the next 15 minutes. There is no change fee for this modification. Is there anything else you need help with regarding your stay?</p>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        feather.replace(); // Initialize Feather Icons
+    </script>
+</body>
+</html>

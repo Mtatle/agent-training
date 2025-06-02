@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Interface - Scenario 3</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Simple icon library (Feather Icons) for demonstration -->
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body>
+    <div class="app-container">
+        <!-- Top Bar (Simplified) -->
+        <div class="top-bar">            <div class="agent-status">
+                <span class="agent-name">Mohammed Ramadan <i data-feather="chevron-down" class="icon-small"></i></span>
+                <button id="logoutBtn" class="logout-btn"><i data-feather="log-out" class="icon-small"></i> Logout</button>
+            </div><div class="scenario-nav">
+                <a href="scenario1.html" class="scenario-box">Scenario 1</a>
+                <a href="scenario2.html" class="scenario-box">Scenario 2</a>
+                <a href="scenario3.html" class="scenario-box active">Scenario 3</a>
+                <a href="scenario4.html" class="scenario-box">Scenario 4</a>
+                <a href="scenario5.html" class="scenario-box">Scenario 5</a>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <!-- Left Panel -->
+            <aside class="left-panel">
+                <div class="company-header">
+                    <h3>FashionForward</h3>
+                    <span>Customer Service Team</span>
+                </div>
+                <div class="company-info">
+                    <h4>GUIDE</h4>
+                    <p class="company-name-display">Order return and exchange issues</p>
+                </div>
+
+                <div class="info-box send-to-cs">
+                    <p class="info-box-title"><i data-feather="alert-circle" class="icon-small"></i> IMPORTANT</p>
+                    <ul>
+                        <li>Verify order details before proceeding</li>
+                        <li>Check return policy eligibility</li>
+                        <li>Provide return shipping label when approved</li>
+                        <li>Process exchange for in-stock items only</li>
+                    </ul>
+                </div>
+
+                <div class="info-box tone">
+                    <p class="info-box-title"><i data-feather="message-square" class="icon-small"></i> TONE</p>
+                    <ul>
+                        <li>Friendly and understanding</li>
+                        <li>Apologize for any inconvenience</li>
+                        <li>No emojis or excessive enthusiasm</li>
+                        <li>Offer solutions, not excuses</li>
+                    </ul>
+                </div>
+
+                <div class="agent-profile">
+                    <p><i data-feather="user" class="icon-small"></i> Maria</p>
+                </div>
+
+                <div class="offer-status">
+                    <i data-feather="tag" class="icon-small"></i> Summer sale active
+                </div>
+            </aside>
+
+            <!-- Middle Panel (Chat) -->
+            <main class="chat-panel">
+                <div class="chat-messages" id="chatMessages">
+                    <div class="system-message">
+                        <i data-feather="bell" class="icon-small"></i> Fashion support conversation started
+                        <span class="timestamp">June 1, 2025, 9:47 am</span>
+                    </div>
+                    <div class="message received">
+                        <div class="message-sender-icon">C</div>
+                        <div class="message-content">
+                            <p>Hi, I received my order yesterday but the dress is too small. I'd like to exchange it for a larger size. Is that possible?</p>
+                            <span class="timestamp">June 1, 2025, 9:48 am</span>
+                        </div>
+                    </div>
+                    <div class="message sent">
+                         <div class="message-content">
+                            <p>Good morning! I'm sorry to hear the dress doesn't fit properly. I'd be happy to help you with an exchange.</p>
+                            <p>Could you please provide your order number so I can look up the details?</p>
+                            <span class="timestamp">June 1, 2025, 9:49 am</span>
+                        </div>
+                        <div class="message-sender-icon self">F</div>
+                    </div>
+                </div>
+                <div class="chat-input-area">
+                    <input type="text" id="chatInput" placeholder="Type your message...">
+                    <button id="sendButton"><i data-feather="send"></i></button>
+                </div>
+            </main>
+
+            <!-- Right Panel -->
+            <aside class="right-panel">
+                <div class="customer-section">
+                    <h4>CUSTOMER</h4>
+                    <p class="customer-phone">+1 212-456-7890</p>
+                </div>
+
+                <div class="info-block">
+                    <div class="info-block-header">
+                        <span>Order Details</span>
+                    </div>
+                    <div class="info-block-content">
+                        <p>Order #FF-23456789</p>
+                        <p>Placed: May 30, 2025</p>
+                        <p>Status: Delivered</p>
+                    </div>
+                </div>
+
+                <div class="info-block">
+                    <div class="info-block-header">
+                        <span><i data-feather="zap" class="icon-small"></i> Available Sizes</span>
+                    </div>
+                    <ul class="info-list">
+                        <li>Summer Floral Dress - M</li>
+                        <li>Summer Floral Dress - L</li>
+                        <li>Summer Floral Dress - XL</li>
+                    </ul>
+                </div>
+                
+                <div class="info-block">
+                    <div class="info-block-header">
+                        <span>Order History</span>
+                        <i data-feather="chevron-up" class="icon-small"></i>
+                    </div>
+                    <ul class="info-list browsing-history">
+                        <li>Blue sweater - Size M<span class="time-ago">1 mo ago</span></li>
+                        <li>Black jeans - Size 8<span class="time-ago">3 mo ago</span></li>
+                        <li>White sneakers - Size 7.5<span class="time-ago">6 mo ago</span></li>
+                    </ul>
+                </div>
+
+                <div class="info-block">
+                    <div class="info-block-header">
+                        <span>TEMPLATES</span>
+                        <i data-feather="chevron-up" class="icon-small"></i>
+                    </div>
+                    <div class="search-templates">
+                        <i data-feather="search" class="icon-small"></i>
+                        <input type="text" placeholder="Search templates (ctrl + /)">
+                    </div>
+                    <div class="template-item">
+                        <div class="template-header">
+                            <span>Return Policy</span>
+                            <span class="template-shortcut">rtn</span>
+                        </div>
+                        <p>Our return policy allows exchanges within 30 days of delivery. We provide a prepaid return shipping label, and once we receive your return, we'll ship the new size to you within 2-3 business days.</p>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        feather.replace(); // Initialize Feather Icons
+    </script>
+</body>
+</html>

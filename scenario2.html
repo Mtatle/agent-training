@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Interface - Scenario 2</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Simple icon library (Feather Icons) for demonstration -->
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body>
+    <div class="app-container">
+        <!-- Top Bar (Simplified) -->
+        <div class="top-bar">            <div class="agent-status">
+                <span class="agent-name">Mohammed Ramadan <i data-feather="chevron-down" class="icon-small"></i></span>
+                <button id="logoutBtn" class="logout-btn"><i data-feather="log-out" class="icon-small"></i> Logout</button>
+            </div><div class="scenario-nav">
+                <a href="scenario1.html" class="scenario-box">Scenario 1</a>
+                <a href="scenario2.html" class="scenario-box active">Scenario 2</a>
+                <a href="scenario3.html" class="scenario-box">Scenario 3</a>
+                <a href="scenario4.html" class="scenario-box">Scenario 4</a>
+                <a href="scenario5.html" class="scenario-box">Scenario 5</a>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <!-- Left Panel -->
+            <aside class="left-panel">
+                <div class="company-header">
+                    <h3>TechSupport Inc.</h3>
+                    <span>Technical Support Team</span>
+                </div>
+                <div class="company-info">
+                    <h4>GUIDE</h4>
+                    <p class="company-name-display">Customer having issues with laptop</p>
+                </div>
+
+                <div class="info-box send-to-cs">
+                    <p class="info-box-title"><i data-feather="alert-circle" class="icon-small"></i> IMPORTANT</p>
+                    <ul>
+                        <li>Find out customer's laptop model</li>
+                        <li>Ask if they've tried restarting</li>
+                        <li>Check for software updates</li>
+                        <li>Inform about warranty status</li>
+                    </ul>
+                </div>
+
+                <div class="info-box tone">
+                    <p class="info-box-title"><i data-feather="message-square" class="icon-small"></i> TONE</p>
+                    <ul>
+                        <li>Professional and patient</li>
+                        <li>Speak clearly with technical terms</li>
+                        <li>Sympathize with customer frustration</li>
+                    </ul>
+                </div>
+
+                <div class="agent-profile">
+                    <p><i data-feather="user" class="icon-small"></i> Alex</p>
+                </div>
+
+                <div class="offer-status">
+                    <i data-feather="tag" class="icon-small"></i> Tech support policy
+                </div>
+            </aside>
+
+            <!-- Middle Panel (Chat) -->
+            <main class="chat-panel">
+                <div class="chat-messages" id="chatMessages">
+                    <div class="system-message">
+                        <i data-feather="bell" class="icon-small"></i> Tech Support conversation started
+                        <span class="timestamp">May 24, 2025, 2:15 pm</span>
+                    </div>
+                    <div class="message received">
+                        <div class="message-sender-icon">C</div>
+                        <div class="message-content">
+                            <p>Hi there! My laptop keeps shutting down randomly. It's so frustrating. Can you help me?</p>
+                            <span class="timestamp">May 24, 2025, 2:16 pm</span>
+                        </div>
+                    </div>
+                    <div class="message sent">
+                         <div class="message-content">
+                            <p>Hello! I'm sorry to hear you're having issues with your laptop. I'd be happy to help troubleshoot this with you.</p>
+                            <p>Could you please tell me the make and model of your laptop?</p>
+                            <span class="timestamp">May 24, 2025, 2:17 pm</span>
+                        </div>
+                        <div class="message-sender-icon self">T</div>
+                    </div>
+                </div>
+                <div class="chat-input-area">
+                    <input type="text" id="chatInput" placeholder="Type your message...">
+                    <button id="sendButton"><i data-feather="send"></i></button>
+                </div>
+            </main>
+
+            <!-- Right Panel -->
+            <aside class="right-panel">
+                <div class="customer-section">
+                    <h4>CUSTOMER</h4>
+                    <p class="customer-phone">+1 555-123-4567</p>
+                </div>
+
+                <div class="info-block">
+                    <div class="info-block-header">
+                        <span>Customer Info</span>
+                    </div>
+                    <div class="info-block-content">
+                        <p>James Wilson</p>
+                        <p>Premium Support Plan</p>
+                        <p>Member since: March 2023</p>
+                    </div>
+                </div>
+
+                <div class="info-block">
+                    <div class="info-block-header">
+                        <span><i data-feather="zap" class="icon-small"></i> Common Issues</span>
+                    </div>
+                    <ul class="info-list">
+                        <li>Battery drainage</li>
+                        <li>Overheating</li>
+                        <li>Software conflicts</li>
+                    </ul>
+                </div>
+                
+                <div class="info-block">
+                    <div class="info-block-header">
+                        <span>Previous Cases</span>
+                        <i data-feather="chevron-up" class="icon-small"></i>
+                    </div>
+                    <ul class="info-list browsing-history">
+                        <li>Laptop screen flickering<span class="time-ago">2 mo ago</span></li>
+                        <li>Windows update issues<span class="time-ago">5 mo ago</span></li>
+                        <li>Battery replacement<span class="time-ago">8 mo ago</span></li>
+                    </ul>
+                </div>
+
+                <div class="info-block">
+                    <div class="info-block-header">
+                        <span>TEMPLATES</span>
+                        <i data-feather="chevron-up" class="icon-small"></i>
+                    </div>
+                    <div class="search-templates">
+                        <i data-feather="search" class="icon-small"></i>
+                        <input type="text" placeholder="Search templates (ctrl + /)">
+                    </div>
+                    <div class="template-item">
+                        <div class="template-header">
+                            <span>Restart Instructions</span>
+                            <span class="template-shortcut">rst</span>
+                        </div>
+                        <p>Please try restarting your laptop by holding the power button for 10 seconds, then turning it back on. This resets temporary system states and often resolves random shutdown issues.</p>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        feather.replace(); // Initialize Feather Icons
+    </script>
+</body>
+</html>

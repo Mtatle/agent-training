@@ -46,7 +46,7 @@ i[data-feather="chevron-up"].icon-small {
 .app-container {
     display: flex;
     flex-direction: column;
-    height: 100%;
+    height: 100vh; /* Full viewport height */
     width: 100%;
 }
 
@@ -59,7 +59,7 @@ i[data-feather="chevron-up"].icon-small {
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid #222f3e;
-    height: 50px; /* Fixed height */
+    height: 60px; /* Increased height */
 }
 .logo-area .logo-img {
     height: 30px;
@@ -78,9 +78,54 @@ i[data-feather="chevron-up"].icon-small {
 }
 .agent-name {
     font-weight: 500;
+    margin-right: 15px;
 }
 .agent-name .icon-small {
     color: #bdc3c7; /* Lighter grey for icon */
+}
+
+/* Logout button styling */
+.logout-btn {
+    background-color: #34495e;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+    font-size: 0.9em;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.2s;
+}
+.logout-btn:hover {
+    background-color: #e74c3c;
+}
+
+/* Scenario Navigation */
+.scenario-nav {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.scenario-box {
+    background-color: #34495e;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.85em;
+    text-decoration: none;
+    transition: background-color 0.2s;
+    cursor: pointer;
+}
+
+.scenario-box:hover {
+    background-color: #2980b9;
+    text-decoration: none;
+}
+
+.scenario-box.active {
+    background-color: #3498db;
 }
 
 /* Switch for Unavailable toggle */
@@ -130,6 +175,7 @@ input:checked + .slider:before {
     flex-grow: 1; /* Takes remaining height */
     overflow: hidden; /* Prevent main-content scroll, panels will scroll */
     background-color: #ffffff;
+    height: 90vh; /* Take 90% of viewport height */
 }
 
 /* Left Panel */
@@ -243,6 +289,8 @@ input:checked + .slider:before {
     display: flex;
     flex-direction: column;
     gap: 15px;
+    min-height: 700px; /* Increase chat height to be much larger */
+    height: 80vh; /* Take up 80% of viewport height */
 }
 .system-message {
     text-align: center;
@@ -301,13 +349,13 @@ input:checked + .slider:before {
 }
 .message.sent {
     background-color: #e6fffb; /* Light teal for sent by agent */
-    align-self: flex-end;
+    align-self: flex-end; /* Align to right side */
 }
 .message.sent .message-sender-icon {
-    order: 1; /* Move icon to the right for sent messages */
+    order: 1; /* Move icon to the right */
 }
 .message.sent .message-content {
-    order: 0;
+    order: 0; /* Content first */
 }
 
 .message-options {
@@ -325,17 +373,19 @@ input:checked + .slider:before {
 
 .chat-input-area {
     display: flex;
-    padding: 10px;
+    padding: 20px;
     border-top: 1px solid #e0e0e0;
     background-color: #f8f9fa;
+    min-height: 100px; /* Increased height */
 }
 #chatInput {
     flex-grow: 1;
-    padding: 10px 15px;
+    padding: 15px;
     border: 1px solid #ccc;
     border-radius: 20px;
-    margin-right: 10px;
+    margin-right: 15px;
     font-size: 1em;
+    min-height: 60px; /* Taller input area */
 }
 #chatInput:focus {
     outline: none;
@@ -406,9 +456,7 @@ input:checked + .slider:before {
 }
 
 
-.customer-section {
-    /* No special styling needed beyond panel defaults if simple */
-}
+/* Customer section uses panel defaults */
 .customer-section h4 {
     font-size: 0.8em;
     color: #888;

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Interface - Scenario 4</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Simple icon library (Feather Icons) for demonstration -->
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body>
+    <div class="app-container">
+        <!-- Top Bar (Simplified) -->
+        <div class="top-bar">            <div class="agent-status">
+                <span class="agent-name">Mohammed Ramadan <i data-feather="chevron-down" class="icon-small"></i></span>
+                <button id="logoutBtn" class="logout-btn"><i data-feather="log-out" class="icon-small"></i> Logout</button>
+            </div><div class="scenario-nav">
+                <a href="scenario1.html" class="scenario-box">Scenario 1</a>
+                <a href="scenario2.html" class="scenario-box">Scenario 2</a>
+                <a href="scenario3.html" class="scenario-box">Scenario 3</a>
+                <a href="scenario4.html" class="scenario-box active">Scenario 4</a>
+                <a href="scenario5.html" class="scenario-box">Scenario 5</a>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <!-- Left Panel -->
+            <aside class="left-panel">
+                <div class="company-header">
+                    <h3>FoodDelivery Express</h3>
+                    <span>Customer Support Team</span>
+                </div>
+                <div class="company-info">
+                    <h4>GUIDE</h4>
+                    <p class="company-name-display">Food delivery issue resolution</p>
+                </div>
+
+                <div class="info-box send-to-cs">
+                    <p class="info-box-title"><i data-feather="alert-circle" class="icon-small"></i> IMPORTANT</p>
+                    <ul>
+                        <li>Get order number and delivery address</li>
+                        <li>Verify the missing/incorrect items</li>
+                        <li>Offer full refund or redelivery</li>
+                        <li>Add a $5 credit for inconvenience</li>
+                    </ul>
+                </div>
+
+                <div class="info-box tone">
+                    <p class="info-box-title"><i data-feather="message-square" class="icon-small"></i> TONE</p>
+                    <ul>
+                        <li>Empathetic and apologetic</li>
+                        <li>Action-oriented</li>
+                        <li>Clear about next steps</li>
+                        <li>Close conversation once issue is resolved</li>
+                    </ul>
+                </div>
+
+                <div class="agent-profile">
+                    <p><i data-feather="user" class="icon-small"></i> Daniel</p>
+                </div>
+
+                <div class="offer-status">
+                    <i data-feather="tag" class="icon-small"></i> Free delivery promo
+                </div>
+            </aside>
+
+            <!-- Middle Panel (Chat) -->
+            <main class="chat-panel">
+                <div class="chat-messages" id="chatMessages">
+                    <div class="system-message">
+                        <i data-feather="bell" class="icon-small"></i> Food delivery support started
+                        <span class="timestamp">June 2, 2025, 7:33 pm</span>
+                    </div>
+                    <div class="message received">
+                        <div class="message-sender-icon">C</div>
+                        <div class="message-content">
+                            <p>Hey, I just got my food delivery but half the items are missing. I ordered 2 burgers, fries, and a shake but only received 1 burger and the fries. I need the rest of my food!</p>
+                            <span class="timestamp">June 2, 2025, 7:35 pm</span>
+                        </div>
+                    </div>
+                    <div class="message sent">
+                         <div class="message-content">
+                            <p>I'm really sorry about your incomplete order. That's definitely frustrating, especially when you're hungry and waiting for your food.</p>
+                            <p>I'd like to help resolve this right away. Could you please provide your order number?</p>
+                            <span class="timestamp">June 2, 2025, 7:36 pm</span>
+                        </div>
+                        <div class="message-sender-icon self">F</div>
+                    </div>
+                </div>
+                <div class="chat-input-area">
+                    <input type="text" id="chatInput" placeholder="Type your message...">
+                    <button id="sendButton"><i data-feather="send"></i></button>
+                </div>
+            </main>
+
+            <!-- Right Panel -->
+            <aside class="right-panel">
+                <div class="customer-section">
+                    <h4>CUSTOMER</h4>
+                    <p class="customer-phone">+1 323-555-4321</p>
+                </div>
+
+                <div class="info-block">
+                    <div class="info-block-header">
+                        <span>Order Details</span>
+                    </div>
+                    <div class="info-block-content">
+                        <p>Order #FDE-78901234</p>
+                        <p>Time: 7:15 PM</p>
+                        <p>Restaurant: Burger Palace</p>
+                    </div>
+                </div>
+
+                <div class="info-block">
+                    <div class="info-block-header">
+                        <span><i data-feather="zap" class="icon-small"></i> Action Options</span>
+                    </div>
+                    <ul class="info-list">
+                        <li>Refund missing items</li>
+                        <li>Redelivery (ETA: 30-45 min)</li>
+                        <li>Voucher for next order</li>
+                    </ul>
+                </div>
+                
+                <div class="info-block">
+                    <div class="info-block-header">
+                        <span>Order History</span>
+                        <i data-feather="chevron-up" class="icon-small"></i>
+                    </div>
+                    <ul class="info-list browsing-history">
+                        <li>Pizza Hut - Large pepperoni<span class="time-ago">5 d ago</span></li>
+                        <li>Taco Bell - Party pack<span class="time-ago">2 w ago</span></li>
+                        <li>Sushi Express - Combo C<span class="time-ago">1 m ago</span></li>
+                    </ul>
+                </div>
+
+                <div class="info-block">
+                    <div class="info-block-header">
+                        <span>TEMPLATES</span>
+                        <i data-feather="chevron-up" class="icon-small"></i>
+                    </div>
+                    <div class="search-templates">
+                        <i data-feather="search" class="icon-small"></i>
+                        <input type="text" placeholder="Search templates (ctrl + /)">
+                    </div>
+                    <div class="template-item">
+                        <div class="template-header">
+                            <span>Missing Items Resolution</span>
+                            <span class="template-shortcut">mir</span>
+                        </div>
+                        <p>I've processed a full refund for the missing items, and I'm adding a $5 credit to your account for the inconvenience. The refund will appear in your account within 3-5 business days. Is there anything else I can help with today?</p>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        feather.replace(); // Initialize Feather Icons
+    </script>
+</body>
+</html>

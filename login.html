@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agent Login</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Simple icon library (Feather Icons) for demonstration -->
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        /* Login-specific styles */
+        .login-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #2c3e50;
+            padding: 20px;
+        }
+        
+        .login-box {
+            background-color: white;
+            width: 100%;
+            max-width: 400px;
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+        
+        .login-header {
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .login-header h1 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        
+        .login-form-group {
+            margin-bottom: 20px;
+        }
+        
+        .login-form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+        
+        .login-form-group input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        
+        .login-btn {
+            width: 100%;
+            padding: 12px;
+            background-color: #2980b9;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        
+        .login-btn:hover {
+            background-color: #3498db;
+        }
+        
+        .company-logo {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .company-logo img {
+            max-height: 60px;
+        }
+        
+        .error-message {
+            color: #e74c3c;
+            text-align: center;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-box">
+            <div class="company-logo">
+                <h2>Customer Support</h2>
+                <p>Agent Portal</p>
+            </div>
+            <div class="login-header">
+                <h1>Login</h1>
+                <p>Enter your credentials to access the portal</p>
+            </div>
+            <form id="loginForm">
+                <div class="login-form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="login-form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit" class="login-btn">Login</button>
+                <p id="error-message" class="error-message"></p>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Simple login logic
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            
+            // Very basic validation - in a real app, this would be handled securely server-side
+            if (username && password) {
+                // Store the username in localStorage so we can use it on other pages
+                localStorage.setItem('agentName', username);
+                
+                // Redirect to the index page
+                window.location.href = 'index.html';
+            } else {
+                document.getElementById('error-message').textContent = 'Please enter both username and password';
+            }
+        });
+    </script>
+</body>
+</html>
